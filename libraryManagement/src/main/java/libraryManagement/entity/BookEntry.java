@@ -1,21 +1,23 @@
 package libraryManagement.entity;
 
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "bookEntries")
-public class BooksEntry {
+public class BookEntry {
     @Id
-    private String bookId;
+    private ObjectId bookId;
     private String bookName;
     private String bookAuthor;
+    private String bookGenre;
 
-    public String getId() {
+    public ObjectId getBookId() {
         return bookId;
     }
 
-    public void setId(String id) {
-        this.bookId = id;
+    public void setBookId(ObjectId bookId) {
+        this.bookId = bookId;
     }
 
     public String getBookName() {
@@ -32,5 +34,13 @@ public class BooksEntry {
 
     public void setBookAuthor(String bookAuthor) {
         this.bookAuthor = bookAuthor;
+    }
+
+    public String getBookGenre() {
+        return bookGenre;
+    }
+
+    public void setBookGenre(String bookGenre) {
+        this.bookGenre = bookGenre;
     }
 }

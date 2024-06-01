@@ -1,4 +1,8 @@
 package libraryManagement.repository;
 
-public interface StudentEntryRepository {
+import libraryManagement.entity.StudentEntry;
+import org.bson.types.ObjectId;
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+public interface StudentEntryRepository extends MongoRepository<StudentEntry, ObjectId> {
 }

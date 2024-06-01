@@ -1,5 +1,6 @@
 package libraryManagement.entity;
 
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -7,16 +8,16 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class StudentEntry {
 
     @Id
-    private String studentId;
+    private ObjectId studentId;
     private String studentName;
     private String studentBranch;
 
 
-    public String getStudentId() {
+    public ObjectId getStudentId() {
         return studentId;
     }
 
-    public void setStudentId(String studentId) {
+    public void setStudentId(ObjectId studentId) {
         this.studentId = studentId;
     }
 
@@ -28,11 +29,11 @@ public class StudentEntry {
         this.studentName = studentName;
     }
 
-    public String getBranch() {
+    public String getStudentBranch() {
         return studentBranch;
     }
 
-    public void setBranch(String branch) {
+    public void setStudentBranch(String branch) {
         this.studentBranch = branch;
     }
 }
